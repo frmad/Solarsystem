@@ -1,0 +1,18 @@
+How It Works in Animation
+
+The angle changes over time (because you increase it by a small value, speed), which moves the object around the circle.
+
+When the angle is 0, the cosine is 1 and sine is 0, so the object will be at position (r,0) on the circle.
+
+As the angle increases, the x and z coordinates update to follow the circle. For example, when the angle is  pi/2 (90 degrees), the cosine becomes 0 and the sine becomes 1, meaning the object will be at position (0,r), which is the top of the circle.
+
+          (0, r)        <-- Z-axis (sin(angle))
+             |
+             |
+(-r, 0) -----O----- (r, 0)  <-- X-axis (cos(angle))
+             |
+             |
+         (0, -r)
+
+
+In the code, you continuously increase the angle inside the animate() loop. This slowly increases the angle over time, causing the object to move along the circular path continuously.
